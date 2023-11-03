@@ -1,0 +1,58 @@
+/* ====== Hero section ====== */
+.hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  color: var(--main-bg-cl);
+
+  max-width: 1600px;
+  max-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--dark-bg-cl);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/bgimage/herobg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    @include fonts(900, 44px, 1.36, 0.06em);
+  }
+}
+
+.hero__feedback-btn {
+  display: inline-flex;
+  min-width: 216px;
+  min-height: 50px;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+
+  @include fonts(700, 16px, 1.87, 0.06em);
+  text-align: center;
+
+  outline-color: var(--accent-cl);
+  color: var(--main-bg-cl);
+  background-color: var(--accent-cl);
+  box-shadow: var(--btn-box-shadow);
+
+  transition: background-color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+/* ====== /Hero section ====== */

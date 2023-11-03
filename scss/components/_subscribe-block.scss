@@ -1,0 +1,78 @@
+/* foot form content */
+.foot-form-block__deck {
+  margin-bottom: 20px;
+
+  font-family: Roboto;
+  @include fonts(700, 14px, 1.14, null);
+
+  color: var(--main-bg-cl);
+}
+
+.foot-mail-form {
+  display: inline-flex;
+}
+
+.foot-mail-form__input {
+  display: inline-flex;
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+  margin-right: 12px;
+
+  @include fonts(null, 16px, 1.25, 0.03em);
+  color: rgba(255, 255, 255, 0.6);
+
+  width: 358px;
+  height: 50px;
+  outline: transparent;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  transition: box-shadow var(--duration) var(--timing-function);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--btn-box-shadow);
+  }
+}
+
+.foot-mail-form__btn {
+  display: inline-flex;
+  align-items: center;
+
+  min-width: 200px;
+  min-height: 50px;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+
+  @include fonts(700, 16px, 1.87, 0.06em);
+  text-align: center;
+
+  color: var(--main-bg-cl);
+  background-color: var(--accent-cl);
+
+  transition: background-color var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    box-shadow: var(--btn-box-shadow);
+  }
+
+  &::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../images/icon-send.svg);
+    background-size: contain;
+  }
+}
+/* /foot form content */
