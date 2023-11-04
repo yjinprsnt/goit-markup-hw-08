@@ -7,15 +7,24 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.title {
+  @include fonts(700, 28px, 1.17, 0.03em);
+
+  @include mq(desktop) {
+    @include fonts(700, 36px, 1.16, 0.03em);
+  }
 }
 
 .btn {
   cursor: pointer;
   border: none;
-}
-
-.title {
-  @include fonts(700, 36px, 1.16, 0.03em);
 }
