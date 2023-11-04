@@ -1,63 +1,77 @@
 /* ====== Clients section ====== */
 .clients__title {
-  // text-align: center;
-  // margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 
-  // color: var(--secondary-txt-cl);
+  color: var(--secondary-txt-cl);
 
-  // @include mq(desktop) {
-  //   margin-bottom: 50px;
-  // }
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
-  // @include centeredFlex();
+  @include centeredFlex();
 
-  // @include mq(not-desktop) {
-  //   flex-wrap: wrap;
-
-  //   margin-top: 15px;
-  //   margin-left: 15px;
-  // }
+  @include mq(not-desktop) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .clients__item {
-  // @include centeredFlex();
+  @include centeredFlex();
 
-  // @include mq(mobile) {
-  //   flex-basis: calc((100% - 2 * 60px) / 2);
-  // }
+  @include mq(mobile) {
+    flex-basis: calc((100% - 2 * var(--gap-between-cards)) / 2);
+  }
 
-  // @include mq(desktop) {
-  //   margin-right: 30px;
+  @include mq(tablet) {
+    flex-basis: calc((100% - 3 * var(--gap-between-cards)) / 3);
+  }
 
-  //   &:last-child {
-  //     margin-right: 0;
-  //   }
-  // }
+  @include mq(not-desktop) {
+    margin: 15px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .clients__link {
-  // @include centeredFlex();
+  @include centeredFlex();
 
-  // width: 170px;
-  // height: 92px;
-  // border-radius: 4px;
-  // border: 1px solid var(--icon-color);
-  // outline-color: var(--accent-cl);
-  // color: var(--icon-color);
+  width: 210px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid var(--icon-color);
+  outline-color: var(--accent-cl);
+  color: var(--icon-color);
 
-  // transition: color var(--duration) var(--timing-function),
-  //   border-color var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function),
+    border-color var(--duration) var(--timing-function);
 
-  // &:hover,
-  // &:focus {
-  //   color: var(--accent-cl);
-  //   border-color: var(--accent-cl);
-  // }
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+    border-color: var(--accent-cl);
+  }
+
+  @include mq(tablet) {
+    width: 226px;
+  }
+
+  @include mq(desktop) {
+    width: 170px;
+  }
 }
 
 .clients__icon {
-  // fill: currentColor;
+  fill: currentColor;
 }
 /* ====== /Clients section ====== */
