@@ -958,6 +958,11 @@ img {
 .about {
   padding-top: 0;
 }
+@media screen and (max-width: 1199.98px) {
+  .about {
+    display: none;
+  }
+}
 .about__title {
   margin-bottom: 50px;
   text-align: center;
