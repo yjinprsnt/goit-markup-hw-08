@@ -169,35 +169,6 @@ img {
   fill: currentColor;
 }
 
-.foot-soc-block {
-  margin-right: 93px;
-}
-
-.foot-soc-block__deck {
-  margin-bottom: 20px;
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  color: var(--main-bg-cl);
-}
-
-.foot-soc-block__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.foot-soc-block__item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .foot-soc-block__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -536,10 +507,12 @@ img {
   color: var(--main-bg-cl);
 }
 
-.foot-mail-form {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+@media screen and (min-width: 1200px) {
+  .foot-mail-form {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
 }
 
 .foot-mail-form__input {
@@ -901,10 +874,9 @@ img {
 @media screen and (min-width: 1200px) {
   .advantag__item {
     width: 270px;
-    margin-right: 30px;
   }
-  .advantag__item:last-child {
-    margin-right: 0;
+  .advantag__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -921,12 +893,8 @@ img {
   margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--secondary-bg-cl);
-}
-@media screen and (min-width: 480px) {
-  .advantag-wrap {
-    width: 450px;
-    height: 120px;
-  }
+  width: 450px;
+  height: 120px;
 }
 @media screen and (min-width: 768px) {
   .advantag-wrap {
@@ -1001,33 +969,72 @@ img {
 }
 
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
   color: var(--secondary-txt-cl);
 }
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+  }
+}
 
 .team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team__item {
-  margin-right: 30px;
-  min-width: 270px;
   border-radius: 0 0 4px 4px;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.1411764706), 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.1411764706), 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
   background-color: var(--main-bg-cl);
 }
-.team__item:last-child {
-  margin-right: 0;
+@media screen and (max-width: 767.98px) {
+  .team__item {
+    width: 450px;
+  }
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: 270px;
+  }
+  .team__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .team-card {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team-card {
+    padding-bottom: 30px;
+  }
 }
 .team-card__subtitle {
   margin-bottom: 10px;
@@ -1154,33 +1161,10 @@ img {
 /* ====== /Clients section ====== */
 /* ====== Footer ====== */
 .foot {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--dark-bg-cl);
-}
-.foot__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.foot-address-block:not(:last-child) {
-  margin-right: 94px;
 }
 
 /* = Address block = */
-.foot-address {
-  display: block;
-  font-style: inherit;
-}
-
-.foot-address__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
 .foot-address__address-link {
   color: var(--main-bg-cl);
   -webkit-transition: color var(--duration) var(--timing-function);
