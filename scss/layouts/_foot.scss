@@ -1,29 +1,29 @@
 /* ====== Footer ====== */
 .foot {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  // padding-top: 60px;
+  // padding-bottom: 60px;
 
   background-color: var(--dark-bg-cl);
 
-  &__container {
-    display: flex;
-    align-items: baseline;
-  }
+  // &__container {
+  //   display: flex;
+  //   align-items: baseline;
+  // }
 }
 
 .foot-address-block:not(:last-child) {
-  margin-right: 94px;
+  // margin-right: 94px;
 }
 
 /* = Address block = */
 .foot-address {
-  display: block;
+  // display: block;
 
-  font-style: inherit;
+  // font-style: inherit;
 }
 
 .foot-address__item:not(:last-child) {
-  margin-bottom: 9px;
+  // margin-bottom: 9px;
 }
 
 .foot-address__address-link {
