@@ -9,7 +9,9 @@
 }
 
 .foot-mail-form {
-  display: inline-flex;
+  @include mq(desktop) {
+    display: inline-flex;
+  }
 }
 
 .foot-mail-form__input {
