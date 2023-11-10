@@ -1,29 +1,54 @@
 /* ====== Footer ====== */
 .foot {
-  // padding-top: 60px;
-  // padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   background-color: var(--dark-bg-cl);
 
-  // &__container {
-  //   display: flex;
-  //   align-items: baseline;
-  // }
+  @include mq(desktop) {
+    &__container {
+      display: flex;
+      align-items: baseline;
+    }
+  }
 }
 
-.foot-address-block:not(:last-child) {
-  // margin-right: 94px;
+.foot__container {
+  @include mq(tablet-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+.foot-address-block {
+  @include mq(mobile-only) {
+    text-align: center;
+  }
+
+  @include mq(not-desktop) {
+    margin-bottom: 60px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 94px;
+  }
 }
 
 /* = Address block = */
 .foot-address {
-  // display: block;
+  display: block;
 
-  // font-style: inherit;
+  font-style: inherit;
 }
 
 .foot-address__item:not(:last-child) {
-  // margin-bottom: 9px;
+  margin-bottom: 8px;
+
+  @include mq(desktop) {
+    margin-bottom: 9px;
+  }
 }
 
 .foot-address__address-link {
