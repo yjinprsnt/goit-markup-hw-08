@@ -36,24 +36,32 @@
 
 // ===== Foot social block =====
 .foot-soc-block {
-  // margin-right: 93px;
+  @include mq(mobile-only) {
+    margin-bottom: 60px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 93px;
+  }
 }
 
 .foot-soc-block__deck {
-  // margin-bottom: 20px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  @include fonts(700, 14px, 1.14, null);
+  color: var(--main-bg-cl);
 
-  // font-family: Roboto;
-  // @include fonts(700, 14px, 1.14, null);
-
-  // color: var(--main-bg-cl);
+  @include mq(not-desktop) {
+    text-align: center;
+  }
 }
 
 .foot-soc-block__list {
-  // @include centeredFlex();
+  @include centeredFlex();
 }
 
 .foot-soc-block__item:not(:last-child) {
-  // margin-right: 10px;
+  margin-right: 10px;
 }
 
 .foot-soc-block__link {
