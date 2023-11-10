@@ -22,24 +22,11 @@
 .clients__item {
   @include centeredFlex();
 
-  @include mq(mobile) {
-    flex-basis: calc((100% - 2 * var(--gap-between-cards)) / 2);
-  }
+  margin: 15px;
+  flex-basis: calc((100% - 2 * 30px) / 2);
 
   @include mq(tablet) {
-    flex-basis: calc((100% - 3 * var(--gap-between-cards)) / 3);
-  }
-
-  @include mq(not-desktop) {
-    margin: 15px;
-  }
-
-  @include mq(desktop) {
-    margin-right: 30px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    flex-basis: calc((100% - 3 * 30px) / 3);
   }
 }
 
