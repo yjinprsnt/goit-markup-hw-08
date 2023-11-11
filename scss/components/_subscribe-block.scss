@@ -14,10 +14,6 @@
 }
 
 .foot-mail-form {
-  @include mq(tablet) {
-    text-align: center;
-  }
-
   @include mq(desktop) {
     display: flex;
   }
@@ -41,7 +37,6 @@
   @include mq(desktop) {
     margin-right: 12px;
     width: 358px;
-    height: 50px;
   }
 
   @include fonts(null, 16px, 1.25, 0.03em);
@@ -75,13 +70,6 @@
   padding-bottom: 10px;
   padding-left: 31px;
 
-  // margin-left: auto;
-  // margin-right: auto;
-
-  @include mq(desktop) {
-    padding-left: 28px;
-  }
-
   @include fonts(700, 16px, 1.87, 0.06em);
 
   color: var(--main-bg-cl);
@@ -89,6 +77,10 @@
 
   transition: background-color var(--duration) var(--timing-function),
     box-shadow var(--duration) var(--timing-function);
+
+  @include mq(desktop) {
+    padding-left: 28px;
+  }
 
   &:hover,
   &:focus {
