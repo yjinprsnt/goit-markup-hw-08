@@ -13,8 +13,12 @@
 }
 
 .header__logo {
-  margin-right: 93px;
   outline-color: var(--accent-cl);
+  margin-right: 88px;
+
+  @include mq(desktop) {
+    margin-right: 93px;
+  }
 }
 
 .foot__logo {
