@@ -4,10 +4,14 @@
   border-bottom: 1px solid #ececec;
 
   &__container {
-    @include mq(tablet) {
-      display: flex;
-      align-items: center;
-    }
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    // @include mq(mobile-only) {
+    //   justify-content: space-between;
+    // }
   }
 }
 /* = Nav block = */
