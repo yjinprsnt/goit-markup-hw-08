@@ -14,7 +14,7 @@
 
 .advantag__item {
   @include mq(mobile-only) {
-    width: 450px;
+    max-width: 450px;
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -39,7 +39,7 @@
   border-radius: 4px;
   background-color: var(--secondary-bg-cl);
 
-  width: 450px;
+  max-width: 450px;
   height: 120px;
 
   @include mq(tablet) {
