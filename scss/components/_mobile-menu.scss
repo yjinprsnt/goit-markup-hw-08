@@ -1,15 +1,25 @@
-.mobile-menu__btn {
-  display: inline-flex;
-  margin: 0;
-  padding-top: 10px;
-  padding-right: 0;
-  padding-bottom: 10px;
-  padding-left: 0;
+// Mobile menu btn open
+.mobile-menu__btn-open {
   background-color: transparent;
   border: none;
+  outline: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    outline-color: var(--accent-cl);
+  }
 
   @include mq(tablet) {
     display: none;
+  }
+}
+
+.open-mobile-menu__icon {
+  transition: fill var(--duration) var(--timing-function);
+
+  .mobile-menu__btn-open:hover &,
+  .mobile-menu__btn-open:focus & {
+    fill: var(--accent-cl);
   }
 }
 
@@ -17,13 +27,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
 
   display: flex;
   flex-direction: column;
 
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   padding-top: 48px;
   padding-right: 40px;
@@ -31,23 +41,124 @@
   padding-left: 40px;
 
   background-color: var(--main-bg-cl);
+  transform: translateY(-100%);
 
-  opacity: 0;
+  transition: transform var(--duration) var(--timing-function);
+
+  &.is-open {
+    transform: translateY(0);
+  }
 }
 
+// Mobile menu btn close
+.mobile-menu__btn-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  background-color: transparent;
+  border: none;
+  outline: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    outline-color: var(--accent-cl);
+  }
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.close-mobile-menu__icon {
+  transition: fill var(--duration) var(--timing-function);
+
+  .mobile-menu__btn-close:hover &,
+  .mobile-menu__btn-close:focus & {
+    fill: var(--accent-cl);
+  }
+}
+
+// Nav block
+.mobile-menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu__nav {
+  margin-bottom: auto;
+}
+
+.mobile-menu__nav-link {
+  display: block;
+
+  @include fonts(500, 40px, 1.17, 0.02em);
+
+  color: var(--secondary-txt-cl);
+  outline-color: var(--accent-cl);
+
+  transition: color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}
+
+.mobile-menu__link--active {
+  color: var(--accent-cl);
+}
+
+// Contacts block
 .mobile-menu__contacts {
-  margin-top: auto;
+  margin-bottom: 64px;
 }
 
-.mobile-menu_btn-close {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
+.mobile-menu__contacts-item:not(:last-child) {
+  margin-bottom: 32px;
+}
 
-  //   position: absolute;
-  //   top: 10px;
-  //   right: 15px;
+.mobile-menu__contact-tel-link {
+  display: block;
 
-  //   border: none;
-  //   background-color: transparent;
+  @include fonts(500, 34px, 1.17, 0.02em);
+
+  color: var(--accent-cl);
+  outline-color: var(--accent-cl);
+}
+
+.mobile-menu__contact-link {
+  display: block;
+
+  @include fonts(500, 24px, 1.72, 0.02em);
+
+  color: var(--main-txt-cl);
+  outline-color: var(--accent-cl);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}
+
+// Socials block
+.mobile-menu__socials {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu__socials-item:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-menu__socials-link {
+  display: block;
+
+  @include fonts(500, 18px, 1.22, 0.02em);
+
+  color: var(--accent-cl);
 }
