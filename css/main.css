@@ -1092,7 +1092,7 @@ img {
 /* ====== Hero section ====== */
 .hero {
   text-align: center;
-  min-width: 480px;
+  max-width: 480px;
   min-height: 400px;
   padding-top: 118px;
   padding-bottom: 128px;
