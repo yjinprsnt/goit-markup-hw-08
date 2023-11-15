@@ -11,7 +11,7 @@
 }
 
 .project-list__item {
-  min-width: 450px;
+  width: 450px;
   min-height: 404px;
 
   @include mq(mobile-only) {
