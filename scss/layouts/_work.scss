@@ -22,7 +22,6 @@
 
   @include mq(tablet) {
     min-width: 354px;
-    min-height: 440px;
 
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
@@ -44,6 +43,12 @@
   &:focus {
     box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
       0px 1px 1px 0px #0000001f;
+  }
+
+  @include mq(tablet-only) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }
 
@@ -100,6 +105,10 @@
   border-right: 1px solid var(--border-item-cl);
   border-bottom: 1px solid var(--border-item-cl);
   border-left: 1px solid var(--border-item-cl);
+
+  @include mq(tablet-only) {
+    flex-grow: 1;
+  }
 }
 
 .project-list__subtitle {
