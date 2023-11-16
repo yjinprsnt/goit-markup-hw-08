@@ -11,8 +11,8 @@
 }
 
 .project-list__item {
-  width: 450px;
-  min-height: 404px;
+  max-width: 450px;
+  max-height: 404px;
 
   @include mq(mobile-only) {
     &:not(:last-child) {
@@ -20,8 +20,9 @@
     }
   }
 
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     min-width: 354px;
+    max-height: 440px;
 
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
@@ -31,6 +32,7 @@
     min-width: 370px;
 
     flex-basis: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
   }
 }
 
