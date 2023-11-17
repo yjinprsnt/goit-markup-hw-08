@@ -23,12 +23,9 @@
 }
 
 .foot-address-block {
-  @include mq(mobile-only) {
-    text-align: center;
-  }
-
   @include mq(not-desktop) {
     margin-bottom: 60px;
+    text-align: center;
   }
 
   @include mq(desktop) {
