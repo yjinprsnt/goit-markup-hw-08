@@ -18,7 +18,8 @@
   transition: fill var(--duration) var(--timing-function);
 
   .mobile-menu__btn-open:hover &,
-  .mobile-menu__btn-open:focus & {
+  .mobile-menu__btn-open:focus &,
+  .mobile-menu__btn-open:checked & {
     fill: var(--accent-cl);
   }
 }
@@ -74,7 +75,8 @@
   transition: fill var(--duration) var(--timing-function);
 
   .mobile-menu__btn-close:hover &,
-  .mobile-menu__btn-close:focus & {
+  .mobile-menu__btn-close:focus &,
+  .mobile-menu__btn-close:checked & {
     fill: var(--accent-cl);
   }
 }
@@ -93,7 +95,7 @@
 .mobile-menu__nav-link {
   display: block;
 
-  @include fonts(500, 40px, 1.17, 0.02em);
+  @include fonts(500, 30px, 1.17, 0.02em);
 
   color: var(--secondary-txt-cl);
   outline-color: var(--accent-cl);
@@ -103,6 +105,10 @@
   &:hover,
   &:focus {
     color: var(--accent-cl);
+  }
+
+  @include mq(mobile) {
+    font-size: 40px;
   }
 }
 
@@ -122,16 +128,20 @@
 .mobile-menu__contact-tel-link {
   display: block;
 
-  @include fonts(500, 34px, 1.17, 0.02em);
+  @include fonts(500, 25px, 1.72, 0.02em);
 
   color: var(--accent-cl);
   outline-color: var(--accent-cl);
+
+  @include mq(mobile) {
+    font-size: 34px;
+  }
 }
 
 .mobile-menu__contact-link {
   display: block;
 
-  @include fonts(500, 24px, 1.72, 0.02em);
+  @include fonts(500, 22px, 1.72, 0.02em);
 
   color: var(--main-txt-cl);
   outline-color: var(--accent-cl);
@@ -140,12 +150,20 @@
   &:focus {
     color: var(--accent-cl);
   }
+
+  @include mq(mobile) {
+    font-size: 24px;
+  }
 }
 
 // Socials block
 .mobile-menu__socials {
   display: flex;
   align-items: center;
+
+  @include mq(mobile-only) {
+    flex-wrap: wrap;
+  }
 }
 
 .mobile-menu__socials-item:not(:last-child) {
@@ -157,8 +175,10 @@
 
 .mobile-menu__socials-link {
   display: block;
-
-  @include fonts(500, 18px, 1.22, 0.02em);
-
   color: var(--accent-cl);
+  @include fonts(500, 13px, 1.22, 0.02em);
+
+  @include mq(mobile) {
+    font-size: 18px;
+  }
 }
