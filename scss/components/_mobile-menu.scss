@@ -188,7 +188,7 @@
 .mobile-menu__socials-link {
   display: block;
   color: var(--accent-cl);
-  @include fonts(500, 13px, 1.22, 0.02em);
+  @include fonts(500, 5px, 1.22, 0.03em);
 
   @include mq(mobile) {
     font-size: 18px;
